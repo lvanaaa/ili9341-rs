@@ -2,13 +2,13 @@
 
 [package]
 name = "ili9341"
-version = "0.6.0"
+version = "0.6.1"
 description = "A platform agnostic driver to interface with the ILI9341 (ald ILI9340C) TFT LCD display"
-authors = ["Yuri Iozzelli <y.iozzelli@gmail.com>"]
+authors = ["Yuri Iozzelli <y.iozzelli@gmail.com> (og) / Andrei Neagu (edit)"]
 categories = ["embedded", "hardware-support", "no-std"]
 keywords = ["embedded-hal-driver", "display", "LCD"]
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/yuri91/ili9341-rs"
+repository = "https://github.com/mohgTheOmen/ili9341-rs"
 edition = "2018"
 
 
@@ -16,9 +16,9 @@ edition = "2018"
 display-interface = "0.5"
 embedded-hal = "1.0.0"
 
-[dependencies.embedded-graphics-core]
+[dependencies.embedded-graphics]
+version = "0.7"
 optional = true
-version = "0.4"
 
 [dev-dependencies]
 cortex-m-rtic = "1.0.0"
@@ -33,7 +33,7 @@ features = ["stm32f411"]
 
 [features]
 default = ["graphics"]
-graphics = ["embedded-graphics-core"]
+graphics = ["embedded-graphics"]
 
 [[example]]
 name = "rtic"

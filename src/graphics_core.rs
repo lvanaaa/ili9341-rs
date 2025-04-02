@@ -1,5 +1,5 @@
 use crate::Ili9341;
-use embedded_graphics_core::{
+use embedded_graphics::{
     pixelcolor::{raw::RawU16, Rgb565},
     prelude::*,
     primitives::Rectangle,
